@@ -2,7 +2,11 @@
 
 #### 介绍
 数字图像处理期末项目
-引用https://github.com/pytorch/examples
+引用
+
+https://github.com/pytorch/examples
+
+https://gitee.com/kaoridesu/digital-image-processing
 ### **一、图像基本操作**
 1. **旋转**  
    - 旋转90度  
