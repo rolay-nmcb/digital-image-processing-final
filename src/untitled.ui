@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageProcess</class>
+ <widget class="QMainWindow" name="ImageProcess">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>808</width>
+    <height>430</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="MyMene">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>808</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="FileList">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <widget class="QMenu" name="OpenImage">
+     <property name="title">
+      <string>打开图片</string>
+     </property>
+     <addaction name="OpenColorImg"/>
+     <addaction name="OpenGrayImg"/>
+    </widget>
+    <addaction name="OpenImage"/>
+    <addaction name="CloseImage"/>
+   </widget>
+   <widget class="QMenu" name="BasicOperation">
+    <property name="title">
+     <string>基本操作</string>
+    </property>
+    <widget class="QMenu" name="Appine">
+     <property name="title">
+      <string>仿射变换</string>
+     </property>
+     <widget class="QMenu" name="Rotate">
+      <property name="title">
+       <string>旋转</string>
+      </property>
+      <addaction name="Rotate90"/>
+      <addaction name="Rotate180"/>
+      <addaction name="Rotate270"/>
+      <addaction name="RotateFree"/>
+     </widget>
+     <widget class="QMenu" name="Scale">
+      <property name="title">
+       <string>放缩</string>
+      </property>
+      <addaction name="scaleByEqualPosition"/>
+      <addaction name="scaleByInput"/>
+     </widget>
+     <addaction name="Scale"/>
+     <addaction name="Rotate"/>
+    </widget>
+    <addaction name="Appine"/>
+    <addaction name="FFT"/>
+   </widget>
+   <widget class="QMenu" name="Enhancemant">
+    <property name="title">
+     <string>图像增强</string>
+    </property>
+    <widget class="QMenu" name="ColorStrength">
+     <property name="title">
+      <string>彩色图像增强</string>
+     </property>
+     <widget class="QMenu" name="Clarify">
+      <property name="title">
+       <string>清晰度</string>
+      </property>
+      <addaction name="globalHist"/>
+      <addaction name="adjustiveHist"/>
+     </widget>
+     <addaction name="Exposure"/>
+     <addaction name="Brightness"/>
+     <addaction name="Contrast"/>
+     <addaction name="Saturation"/>
+     <addaction name="Clarify"/>
+     <addaction name="Hue"/>
+     <addaction name="Value"/>
+    </widget>
+    <widget class="QMenu" name="GrayStrength">
+     <property name="title">
+      <string>灰度图像增强</string>
+     </property>
+     <addaction name="linerStrength"/>
+     <addaction name="logStrength"/>
+     <addaction name="grayHist"/>
+    </widget>
+    <addaction name="ColorStrength"/>
+    <addaction name="GrayStrength"/>
+   </widget>
+   <widget class="QMenu" name="Split">
+    <property name="title">
+     <string>图像分割</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="Smooth">
+    <property name="title">
+     <string>图像平滑</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="Sharpen">
+    <property name="title">
+     <string>图像锐化</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="Restoration">
+    <property name="title">
+     <string>图像恢复</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="Morphology">
+    <property name="title">
+     <string>形态学处理</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="StyleChange">
+    <property name="title">
+     <string>风格变迁</string>
+    </property>
+   </widget>
+   <addaction name="FileList"/>
+   <addaction name="BasicOperation"/>
+   <addaction name="Enhancemant"/>
+   <addaction name="Split"/>
+   <addaction name="Smooth"/>
+   <addaction name="Sharpen"/>
+   <addaction name="Restoration"/>
+   <addaction name="Morphology"/>
+   <addaction name="StyleChange"/>
+  </widget>
+  <action name="CloseImage">
+   <property name="text">
+    <string>保存图片</string>
+   </property>
+  </action>
+  <action name="FFT">
+   <property name="text">
+    <string>傅里叶变换</string>
+   </property>
+   <property name="toolTip">
+    <string>傅里叶变换</string>
+   </property>
+  </action>
+  <action name="actionLinearChange">
+   <property name="text">
+    <string>线性变换</string>
+   </property>
+  </action>
+  <action name="actionLogChange">
+   <property name="text">
+    <string>对数变换</string>
+   </property>
+  </action>
+  <action name="Rotate90">
+   <property name="text">
+    <string>旋转90度</string>
+   </property>
+  </action>
+  <action name="Rotate180">
+   <property name="text">
+    <string>旋转180度</string>
+   </property>
+  </action>
+  <action name="Rotate270">
+   <property name="text">
+    <string>旋转270度</string>
+   </property>
+  </action>
+  <action name="RotateFree">
+   <property name="text">
+    <string>旋转任意角度</string>
+   </property>
+  </action>
+  <action name="scaleByEqualPosition">
+   <property name="text">
+    <string>等比例放缩</string>
+   </property>
+  </action>
+  <action name="scaleByInput">
+   <property name="text">
+    <string>任意比例放缩</string>
+   </property>
+  </action>
+  <action name="OpenColorImg">
+   <property name="text">
+    <string>打开彩色图像</string>
+   </property>
+  </action>
+  <action name="OpenGrayImg">
+   <property name="text">
+    <string>打开灰度图像</string>
+   </property>
+  </action>
+  <action name="actionExposure">
+   <property name="text">
+    <string>曝光</string>
+   </property>
+  </action>
+  <action name="actionColorBalance">
+   <property name="text">
+    <string>色彩平衡</string>
+   </property>
+  </action>
+  <action name="actionSaturation">
+   <property name="text">
+    <string>饱和度</string>
+   </property>
+  </action>
+  <action name="Exposure">
+   <property name="text">
+    <string>曝光</string>
+   </property>
+  </action>
+  <action name="Brightness">
+   <property name="text">
+    <string>亮度</string>
+   </property>
+  </action>
+  <action name="Contrast">
+   <property name="text">
+    <string>对比度</string>
+   </property>
+  </action>
+  <action name="Saturation">
+   <property name="text">
+    <string>饱和度</string>
+   </property>
+  </action>
+  <action name="Hue">
+   <property name="text">
+    <string>色相</string>
+   </property>
+  </action>
+  <action name="Value">
+   <property name="text">
+    <string>明度</string>
+   </property>
+  </action>
+  <action name="globalHist">
+   <property name="text">
+    <string>全局直方图均衡化</string>
+   </property>
+  </action>
+  <action name="adjustiveHist">
+   <property name="text">
+    <string>自适应直方图均衡化</string>
+   </property>
+  </action>
+  <action name="linerStrength">
+   <property name="text">
+    <string>线性增强</string>
+   </property>
+  </action>
+  <action name="logStrength">
+   <property name="text">
+    <string>对数增强</string>
+   </property>
+  </action>
+  <action name="grayHist">
+   <property name="text">
+    <string>直方图均衡化</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
