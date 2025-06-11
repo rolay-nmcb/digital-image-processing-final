@@ -919,25 +919,58 @@ class Ui_ImageProcess(object):
         self.Style.setObjectName(u"Style")
         self.Style.setTitle(QCoreApplication.translate("ImageProcess", u"风格处理", None))
 
-        self.candy  = QAction(self.Style)
+        self.People = QMenu(self.Style)
+        self.Style.addAction(self.People.menuAction())
+        self.People.setObjectName(u"People")
+        self.People.setTitle(
+            QCoreApplication.translate("ImageProcess", u"人像", None))
+
+        self.candy  = QAction(self.People)
         self.candy.setObjectName(u"candy")
         self.candy.setText(QCoreApplication.translate("ImageProcess", u"candy", None))
-        self.Style.addAction(self.candy)
+        self.People.addAction(self.candy)
 
-        self.mosaic=  QAction(self.Style)
+        self.mosaic=  QAction(self.People)
         self.mosaic.setObjectName(u"mosaic")
         self.mosaic.setText(QCoreApplication.translate("ImageProcess", u"mosaic", None))
-        self.Style.addAction(self.mosaic)
+        self.People.addAction(self.mosaic)
 
-        self.rain_princess =  QAction(self.Style)
+        self.rain_princess =  QAction(self.People)
         self.rain_princess.setObjectName(u"rain_princess")
         self.rain_princess.setText(QCoreApplication.translate("ImageProcess", u"rain_princess", None))
-        self.Style.addAction(self.rain_princess)
+        self.People.addAction(self.rain_princess)
 
-        self.udnie =  QAction(self.Style)
+        self.udnie =  QAction(self.People)
         self.udnie.setObjectName(u"udnie")
         self.udnie.setText(QCoreApplication.translate("ImageProcess", u"udnie", None))
-        self.Style.addAction(self.udnie)
+        self.People.addAction(self.udnie)
+
+        self.scenery = QMenu(self.Style)
+        self.Style.addAction(self.scenery.menuAction())
+        self.scenery.setObjectName(u"scenery")
+        self.scenery.setTitle(
+            QCoreApplication.translate("ImageProcess", u"风景", None))
+
+        self.starry_night= QAction(self.scenery)
+        self.starry_night.setObjectName(u"starry_night")
+        self.starry_night.setText(QCoreApplication.translate("ImageProcess", u"starry_night", None))
+        self.scenery.addAction(self.starry_night)
+
+        self.picasso=  QAction(self.scenery)
+        self.picasso.setObjectName(u"picasso")
+        self.picasso.setText(QCoreApplication.translate("ImageProcess", u"picasso", None))
+        self.scenery.addAction(self.picasso)
+
+        self.cuphead=  QAction(self.scenery)
+        self.cuphead.setObjectName(u"cuphead")
+        self.cuphead.setText(QCoreApplication.translate("ImageProcess", u"cuphead", None))
+        self.scenery.addAction(self.cuphead)
+
+        self.JoJo=  QAction(self.scenery)
+        self.JoJo.setObjectName(u"JoJo")
+        self.JoJo.setText(QCoreApplication.translate("ImageProcess", u"JoJo", None))
+        self.scenery.addAction(self.JoJo)
+
 
 
     def loadImage(self, image_path, label):

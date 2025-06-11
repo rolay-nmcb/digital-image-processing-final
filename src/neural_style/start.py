@@ -26,12 +26,16 @@ def process_image_with_style(image, model_name: str):
 
     # 使用指定模型进行图像风格化
     styled_image = stylize_image(image, model_path)
+
+    # 如果模型输出为 RGB，将其转为 BGR 以供 OpenCV 正常显示和操作
+    if len(styled_image.shape) == 3 and styled_image.shape[2] == 3:
+        styled_image = cv2.cvtColor(styled_image, cv2.COLOR_RGB2BGR)
     return styled_image
 
 
 if __name__ == '__main__':
     # 示例：加载图像并应用风格
-    img_path = '../1.png'
+    img_path = '../3.jpg'
     img = cv2.imread(img_path)
 
     if img is None:
@@ -39,7 +43,7 @@ if __name__ == '__main__':
     else:
         try:
             # 调用入口函数，传入图像和模型名称
-            result = process_image_with_style(img, 'mosaic')
+            result = process_image_with_style(img, 'JoJo')
 
             # 显示结果
             cv2.imshow('Styled Image', result)

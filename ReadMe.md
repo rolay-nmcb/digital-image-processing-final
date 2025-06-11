@@ -136,6 +136,10 @@ https://gitee.com/kaoridesu/digital-image-processing
 - Mosaic风格  
 - Rain Princess风格  
 - Udnie风格  
+- Starry_night风格
+- Picasso风格
+- Cuphead风格
+- JoJo 风格
 
 
 ### **十二、其他支持功能**
@@ -151,6 +155,7 @@ https://gitee.com/kaoridesu/digital-image-processing
 ### **说明**  
 - 每个功能项可通过 PyQt5 菜单栏触发，绑定对应的 OpenCV/NumPy 算法实现。  
 - 风格迁移需结合预训练深度学习模型（如 PyTorch 实现的神经风格迁移模型）。  
+- 对于大型图片的风格迁移需要一定的显存需求，请根据实际情况选择合适的设备。
 - 人像美化需依赖人脸检测模型（如 Haar 级联检测器）定位面部区域。  
 
 
@@ -164,7 +169,7 @@ https://gitee.com/kaoridesu/digital-image-processing
 2. 此外还需要安装dlib  在Dlib_Windows_Python3.x文件夹下找到自己的py版本运行指令(支持python 3.7版本到python 3.12版本)  
 (如python 3.11版本 执行以下指令)  
 pip install dlib-19.24.1-cp311-cp311-win_amd64.whl  
-(注意numpy版本要不高于1.26.0 防止与dlib冲突)
+(注意numpy版本要不高于1.26.0 防止与dlib冲突 文件中的test.py可检查是否存在冲突)
 3. 对于torch>=2.6  torchvision的安装
 直接到 pytorch官网
 https://pytorch.org/get-started/locally/
@@ -172,7 +177,7 @@ https://pytorch.org/get-started/locally/
 get start
 选择：
 stable ，windows ， pip，python，cuda12.6
-复制命令到虚拟环境中安装
+复制命令到环境中安装
 
 
 #### 使用说明

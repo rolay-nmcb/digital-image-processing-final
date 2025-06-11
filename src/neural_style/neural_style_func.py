@@ -184,7 +184,7 @@ def stylize_onnx(content_image, args):
 
 
 # 新增入口函数
-def stylize_image(content_image_cv2, model_path, accel=False):
+def stylize_image(content_image_cv2, model_path, accel=True):
     class Args:
         def __init__(self):
             self.model = model_path

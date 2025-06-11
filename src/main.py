@@ -238,6 +238,10 @@ class myUI(QMainWindow, Ui_ImageProcess):
         self.mosaic.triggered.connect(lambda: self.simple_operation('mosaic', 0))
         self.rain_princess.triggered.connect(lambda: self.simple_operation('rain_princess', 0))
         self.udnie.triggered.connect(lambda: self.simple_operation('udnie', 0))
+        self.starry_night.triggered.connect(lambda: self.simple_operation('starry_night', 0))
+        self.picasso.triggered.connect(lambda: self.simple_operation('picasso', 0))
+        self.cuphead.triggered.connect(lambda: self.simple_operation('cuphead', 0))
+        self.JoJo.triggered.connect(lambda: self.simple_operation('JoJo', 0))
 
         # 重置图像
         self.ResetAction.triggered.connect(self.reset_image)
@@ -514,6 +518,14 @@ class myUI(QMainWindow, Ui_ImageProcess):
                 self.img_process = process_image_with_style(self.img_process, 'rain_princess')
             elif code == 'udnie':
                 self.img_process = process_image_with_style(self.img_process, 'udnie')
+            elif code == 'starry_night':
+                self.img_process = process_image_with_style(self.img_process, 'starry_night')
+            elif code == 'picasso':
+                self.img_process = process_image_with_style(self.img_process, 'picasso')
+            elif code == 'cuphead':
+                self.img_process = process_image_with_style(self.img_process, 'cuphead')
+            elif code == 'JoJo':
+                self.img_process = process_image_with_style(self.img_process, 'JoJo')
 
         except Exception as e:
             # 使用 QMessageBox 显示错误信息
