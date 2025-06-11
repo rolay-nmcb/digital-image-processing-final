@@ -176,7 +176,7 @@ https://pytorch.org/get-started/locally/
 
 get start
 选择：
-stable ，windows ， pip，python，cuda12.6
+stable ，windows ， pip，python，cuda12.6(根据自己的电脑配置选择)
 复制命令到环境中安装
 
 
