@@ -233,7 +233,7 @@ class myUI(QMainWindow, Ui_ImageProcess):
         self.make_up.triggered.connect(lambda: self.simple_operation('make_up', 0))     # 上妆
 
 
-        #风格迁移试验
+        #风格迁移
         self.candy.triggered.connect(lambda: self.simple_operation('candy', 0))
         self.mosaic.triggered.connect(lambda: self.simple_operation('mosaic', 0))
         self.rain_princess.triggered.connect(lambda: self.simple_operation('rain_princess', 0))
@@ -242,6 +242,9 @@ class myUI(QMainWindow, Ui_ImageProcess):
         self.picasso.triggered.connect(lambda: self.simple_operation('picasso', 0))
         self.cuphead.triggered.connect(lambda: self.simple_operation('cuphead', 0))
         self.JoJo.triggered.connect(lambda: self.simple_operation('JoJo', 0))
+        self.fu_shi_hui.triggered.connect(lambda: self.simple_operation('fu_shi_hui', 0))
+        self.anime.triggered.connect(lambda: self.simple_operation('anime', 0))
+        self.mc.triggered.connect(lambda: self.simple_operation('mc', 0))
 
         # 重置图像
         self.ResetAction.triggered.connect(self.reset_image)
@@ -526,6 +529,12 @@ class myUI(QMainWindow, Ui_ImageProcess):
                 self.img_process = process_image_with_style(self.img_process, 'cuphead')
             elif code == 'JoJo':
                 self.img_process = process_image_with_style(self.img_process, 'JoJo')
+            elif code == 'fu_shi_hui':
+                self.img_process = process_image_with_style(self.img_process, 'fu_shi_hui')
+            elif code == 'anime':
+                self.img_process = process_image_with_style(self.img_process, 'anime')
+            elif code == 'mc':
+                self.img_process = process_image_with_style(self.img_process, 'mc')
 
         except Exception as e:
             # 使用 QMessageBox 显示错误信息

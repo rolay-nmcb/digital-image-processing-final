@@ -951,6 +951,12 @@ class Ui_ImageProcess(object):
         self.scenery.setTitle(
             QCoreApplication.translate("ImageProcess", u"风景", None))
 
+
+        self.fu_shi_hui  = QAction(self.scenery)
+        self.fu_shi_hui.setObjectName(u"fu_shi_hui")
+        self.fu_shi_hui.setText(QCoreApplication.translate("ImageProcess", u"浮世绘", None))
+        self.scenery.addAction(self.fu_shi_hui)
+
         self.starry_night= QAction(self.scenery)
         self.starry_night.setObjectName(u"starry_night")
         self.starry_night.setText(QCoreApplication.translate("ImageProcess", u"starry_night", None))
@@ -970,6 +976,18 @@ class Ui_ImageProcess(object):
         self.JoJo.setObjectName(u"JoJo")
         self.JoJo.setText(QCoreApplication.translate("ImageProcess", u"JoJo", None))
         self.scenery.addAction(self.JoJo)
+
+        self.anime = QAction(self.scenery)
+        self.anime.setObjectName(u"anime")
+        self.anime.setText(QCoreApplication.translate("ImageProcess", u"anime", None))
+        self.scenery.addAction(self.anime)
+
+        self.mc=  QAction(self.scenery)
+        self.mc.setObjectName(u"mc")
+        self.mc.setText(QCoreApplication.translate("ImageProcess", u"mc", None))
+        self.scenery.addAction(self.mc)
+
+
 
 
 

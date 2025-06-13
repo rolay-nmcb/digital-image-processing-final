@@ -140,6 +140,9 @@ https://gitee.com/kaoridesu/digital-image-processing
 - Picasso风格
 - Cuphead风格
 - JoJo 风格
+- 浮世绘风格
+- anime风格
+- mc风格
 
 
 ### **十二、其他支持功能**
